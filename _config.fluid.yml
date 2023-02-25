@@ -872,13 +872,14 @@ cusdis:
 giscus:
   repo: WearCode/wearcode.github.io
   repo-id: R_kgDOHtWDRg
-  category: Announcements
+  category: 博客评论区
   category-id: DIC_kwDOHtWDRs4CQZ6D
-  theme-light: light
-  theme-dark: dark
+  theme: preferred_color_scheme
+#  theme-light: light
+#  theme-dark: dark
   mapping: og:title
   reactions-enabled: 1
-  emit-metadata: 0
+  emit-metadata: 1
   input-position: top
   lang: zh-CN
 
