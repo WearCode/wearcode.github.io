@@ -105,3 +105,4 @@ deploy:
   type: git
   repo: https://github.com/WearCode/wearcode.github.io.git
   branch: main
+  token: $token
