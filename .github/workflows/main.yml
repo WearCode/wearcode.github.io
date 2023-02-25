@@ -41,8 +41,11 @@ jobs:
         run: |
           npm install
 
-      - name: 部署博客
-        run: |
-          git config --global  user.name "${{secrets.GIT_NAME}}"
-          git config --global user.email "${{secrets.GIT_EMAIL}}"
-          hexo clean && hexo g && hexo d
+      - name: Build
+        run: hexo clean && hexo g
+        
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
