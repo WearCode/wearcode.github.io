@@ -40,7 +40,7 @@ jobs:
 
       - name: 部署博客
         run: |
-          hexo clean && hexo g && hexo douban && gulp
+          hexo clean && hexo g
           cd ./public
           git init
           git config user.name "${{secrets.GIT_NAME}}"
@@ -48,4 +48,3 @@ jobs:
           git add .
           git commit -m "Update"
           git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" main:main
-          git push --force --quiet "https://${{secrets.CD_TOKEN}}@${{secrets.CD_REF}}" main:main
