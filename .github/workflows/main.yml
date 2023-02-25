@@ -47,12 +47,5 @@ jobs:
           git config user.email "${{secrets.GIT_EMAIL}}"
           git add .
           git commit -m "Update"
-          git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" master:master
-          git push --force --quiet "https://${{secrets.CD_TOKEN}}@${{secrets.CD_REF}}" master:master
-
-
-
-作者: Jerry
-連結: https://blog.crazywong.com/posts/74006f42/#%E5%89%B5%E5%BB%BAActions
-來源: CrazyWong
-著作權歸作者所有。商業轉載請聯絡作者獲得授權，非商業轉載請註明出處。
+          git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" main:main
+          git push --force --quiet "https://${{secrets.CD_TOKEN}}@${{secrets.CD_REF}}" main:main
